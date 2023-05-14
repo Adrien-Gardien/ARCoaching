@@ -1,0 +1,38 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+<article id="login_page">
+<section>
+<form method="post" class="bold my-5" id="test">
+ <p class="light">Vous pouvez obtenir des conseils gratuits de moi tous les jours sur la façon de se
+                    mettre en forme. <br> Chaque jour est un jour pour se reprendre en main ! <br>
+                    Si vous voulez directement m'envoyez un mail contacter moi au <span style="color: #BB2D3B;">
+                        <strong> alexandrerouly@gmail.com </strong></span></p>
+<h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
+    {% if error %}
+        <div class="alert alert-danger">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
+    {% endif %}
+
+    {% if app.user %}
+        <div class="mb-3">
+            You are logged in as {{ app.user.userIdentifier }}, <a href="{{ path('app_logout') }}">Logout</a>
+        </div>
+    {% endif %}
+
+    <div class="m-0">
+                    <label for="inputEmail" class="form-label"></label>
+                    <input type="email" value="{{ last_username }}" name="email" class="form-control" id="inputEmail" autocomplete="email" placeholder="Email" required autofocus>
+    </div>
+    <div class="my-3">
+                    <label for="exampleInputEmail1" class="form-label"></label>
+                    <input type="password" name="password" id="inputPassword" class="form-control" autocomplete="current-password" placeholder="Mot de passe" required>
+    </div>
+    <button type="submit" class="btn btn-danger btn-lg" id="button_contact">Envoyer</button>
+
+    <input type="hidden" name="_csrf_token" value="{{ csrf_token('authenticate') }}">
+</form>
+</section>
+</article>
+{% endblock %}
+
+

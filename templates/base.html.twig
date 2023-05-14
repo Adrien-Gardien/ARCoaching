@@ -4,74 +4,27 @@
 		<meta charset="UTF-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>ARCoaching</title>
+		<title>{% block title %} ARCoaching {% endblock %}</title>
 		<link rel="stylesheet" href="{{ asset('style.css') }}">
-		{% block stylesheets %}
-			{{ encore_entry_link_tags('app') }}
-		{% endblock %}
+		{% block stylesheets %}{{ encore_entry_link_tags('app') }}{% endblock %}
+		{% block javascripts %}{{ encore_entry_script_tags('app') }}{% endblock %}
 	</head>
 
-{# ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- #}
-
-	{% block header %}
-		<header class="bold d-flex justify-content-center">
-			<nav class="navbar navbar-expand-lg p-0">
-				<div class="container-fluid d-flex justify-content-center" id="navHeader">
-					<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-						<span class="navbar-toggler-icon"></span>
-					</button>
-					<div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-						<div
-							class="navbar-nav container d-flex justify-content-center" id="navElements">
-							<!-- <a class="nav-link active ms-5" aria-current="page" href="#"></a> -->
-							<a class="nav-link mx-2 text-light" href="#">Actualités</a>
-							<a class="nav-link mx-2 text-light" href="#">Programmes</a>
-							<a class="navbar-brand mx-5 text-danger" href="#" id="logoAR">ARCoaching</a>
-							<a class="nav-link mx-2 text-light" href="#">A propos</a>
-							<a class="nav-link mx-2 text-light" href="#">
-								<button type="button" class="btn btn-danger btn-group-lg p-3 ">Me Contacter</button>
-							</a>
-						</div>
-					</div>
-				</div>
-			</nav>
-		</header>
-	{% endblock %}
-
-{# ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- #}
 
 	<body>
-		{% block body %}
-		
-			{% block javascripts %}
-				{{ encore_entry_script_tags('app') }}
-			{% endblock %}
-		{% endblock %}
+	
+	
+
+	{% block header %}{% endblock %}
+
+
+	{% block body %}{% endblock %}
+
+	
+	{% block footer %}{% endblock %}
+
+	
+	
 	</body>
 
-{# ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- #}
-
-	{% block footer %}
-		<footer class="d-flex row justify-content-center">
-			<div class="border_footer col-3"></div>
-			<div class="p-5 col-5" id="div_footer_contact">
-				<strong>
-					<h2 class="bold text-light">
-						Contact Infos
-					</h2>
-				</strong>
-				<div id="div_footer">
-					<h6 class="my-4 fs-5 text">Téléphone : 06.47.38.71.56</h6>
-					<h6 class="my-4 fs-5 text">Email : alexandrerouly@gmail.com</h6>
-					<h6 class="bold my-4 fs-5 text" id="footer_reseaux">
-						Mes réseaux :
-						<a href=""><img src="./img/social_footer/instagram.png" alt="instagram" class="img_footer mx-3"></a>
-						<a href=""><img src="./img/social_footer/facebook.png" alt="facebook" class="img_footer mx-3"></a>
-						<a href=""><img src="./img/social_footer/tik-tok.png" alt="tik-tok" class="img_footer mx-3"></a>
-					</h6>
-				</div>
-			</div>
-			<div class="border_footer col-3"></div>
-		</footer>
-	{% endblock %}
 </html>
