@@ -12,9 +12,11 @@
 					<a class="nav-link mx-2 text-light" href="#">Programmes</a>
 					<a class="navbar-brand mx-5 text-danger" href="#" id="logoAR">ARCoaching</a>
 					<a class="nav-link mx-2 text-light" href="#">A propos</a>
-					<a class="nav-link mx-2 text-light" href="#">
-						<button type="button" class="btn btn-danger btn-group-lg p-3 ">Me Contacter</button>
-					</a>
+					<a class="nav-link mx-2 text-light" href="#"><button type="button" class="btn btn-danger btn-group-lg p-3 ">Me Contacter</button></a>
+					{% if app.user %}<a class="nav-link mx-2 text-light" href="#"><a class="nav-link mx-2 text-light" href="{{ path("app_logout") }}">Déconnexion</a>{{ app.user.email }}</a>
+					{% else %}
+					<a class="nav-link mx-2 text-light" href="{{path("app_login")}}">Connexion</a>
+					{% endif %}
 				</div>
 			</div>
 		</div>
