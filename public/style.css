@@ -433,7 +433,21 @@ footer {
 
 /* MEDIA QUERIES */
 
+@media screen and (max-width: 990px) {
 
+#navHeader {
+    justify-content: space-between;
+}
+
+}
+
+@media screen and (max-width: 1300px) {
+
+#userMail {
+    display: none;
+}
+
+}
 
 @media screen and (max-width: 900px) {
 
@@ -505,8 +519,6 @@ footer {
 }
 
 
-#test {
-    width: 30%;
-}
+
 
 

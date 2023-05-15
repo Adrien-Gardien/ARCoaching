@@ -1,21 +1,18 @@
 {% extends 'base.html.twig' %}
+{% block css %}<link rel="stylesheet" href="{{ asset('styleLogin.css') }}">{% endblock %}
 
 {% block body %}
 <article id="login_page">
-<section>
-<form method="post" class="bold my-5" id="test">
- <p class="light">Vous pouvez obtenir des conseils gratuits de moi tous les jours sur la façon de se
-                    mettre en forme. <br> Chaque jour est un jour pour se reprendre en main ! <br>
-                    Si vous voulez directement m'envoyez un mail contacter moi au <span style="color: #BB2D3B;">
-                        <strong> alexandrerouly@gmail.com </strong></span></p>
-<h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
+<section id="section_login">
+<form method="post" class="m-5 p-5 light" id="login_form">
+<h1 class="h3 mb-3 font-weight-normal text-light bold">Veuillez vous connecter</h1>
     {% if error %}
         <div class="alert alert-danger">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
     {% endif %}
 
     {% if app.user %}
-        <div class="mb-3">
-            You are logged in as {{ app.user.userIdentifier }}, <a href="{{ path('app_logout') }}">Logout</a>
+        <div class="mb-3 text-light">
+            Vous êtes déjà connéctés en tant que {{ app.user.userIdentifier }}, <a id="message_deconnexion" class="text-danger" href="{{ path('app_logout') }}">déconnexion</a>
         </div>
     {% endif %}
 

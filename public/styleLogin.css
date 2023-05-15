@@ -1,0 +1,69 @@
+/* FONT START */
+
+@font-face {
+    font-family: 'Muli Bold'; /* Title */
+    src: url('./font/Muli-Bold.ttf');
+  }
+@font-face {
+    font-family: 'Muli light'; /* Paragraphe */ 
+    src: url('./font/Muli-Light.ttf');
+  }
+
+.light {
+    font-family: 'Muli light';
+}
+
+.bold {
+    font-family: 'Muli Bold';
+}
+
+/* FONT END */
+
+
+
+
+/* -------------------------------------------------------------------------------------------------------------------- */
+/* -------------------------------------------------------------------------------------------------------------------- */
+/* -------------------------------------------------------------------------------------------------------------------- */
+
+
+
+body {
+    background-image: url('./img/loginPage.jpg');
+    background-size: cover;
+    height: 100vh
+}
+
+#login_page {
+    height: 100%;
+    width: 100%;
+}
+
+#section_login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffffffff;
+    width: 50%;
+    height: 100%;
+}
+
+#login_form {
+    background-color: #222222f1;
+    width: 50%;
+    
+}
+
+#message_deconnexion {
+    text-decoration: none;
+}
+
+
+@media screen and (max-width: 900px) {
+    #section_login {
+        width: 100%;
+    }
+    #login_form {
+        width: 80%;
+    }
+}
