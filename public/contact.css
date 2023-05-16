@@ -1,0 +1,87 @@
+/* FONT START */
+
+@font-face {
+    font-family: 'Muli Bold'; /* Title */
+    src: url('./font/Muli-Bold.ttf');
+  }
+@font-face {
+    font-family: 'Muli light'; /* Paragraphe */ 
+    src: url('./font/Muli-Light.ttf');
+  }
+
+.light {
+    font-family: 'Muli light';
+}
+
+.bold {
+    font-family: 'Muli Bold';
+}
+
+/* FONT END */
+
+
+
+
+/* -------------------------------------------------------------------------------------------------------------------- */
+/* -------------------------------------------------------------------------------------------------------------------- */
+/* -------------------------------------------------------------------------------------------------------------------- */
+
+
+body {
+    background-image: url('./img/background_inter_program.jpg');
+    background-size: cover;
+    height: 100vh
+}
+
+#article {
+    background-color: #ffffffff;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#section {
+    background-color: #222222ee;
+    width: 80%;
+    height: 50%;
+}
+
+h1 {
+    text-align: center;
+}
+
+form {
+    height: 80%;
+    margin: 7.5%;
+}
+
+#contact {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+
+.email-input-div {
+    width: 75%;
+}
+.content-input-div {
+    width: 75%;
+}
+
+.inputForm {
+    width: 100%;
+}
+
+
+@media screen and (max-width: 800px) {
+    #article {
+        width: 100%;
+    }
+    #form {
+        width: 80%;
+    }
+}

@@ -1,10 +1,21 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Page de Contact{% endblock %}
+{% block title %}Page de Contact
+{% endblock %}
+{% block css %}<link rel="stylesheet" href="{{ asset('contact.css') }}">
+{% endblock %}
+	
 
 {% block body %}
-<h1> Contactez-moi !</h1>
-<div>
-    {{ form(formulaire) }}
-</div>
+	
+
+	<article id="article">
+		<section id="section">
+            <h1 class="bold text-light mt-5"> Contactez-moi !</h1>
+			{{ form(formulaire) }}
+			</section>
+		</article>
 {% endblock %}
+
+
+
