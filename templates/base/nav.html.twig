@@ -1,6 +1,7 @@
+{% block css %}<link rel="stylesheet" href="{{ asset('style.css') }}">{% endblock %}
 <header class="bold d-flex justify-content-center">
 	<nav class="navbar navbar-expand-lg p-0">
-	<a class="navbar-brand mx-5 text-danger" href="#" id="logoAR">ARCoaching</a>
+	<a class="navbar-brand mx-5 text-danger" href="{{ path("app_home") }}" id="logoAR">ARCoaching</a>
 		<div class="container-fluid d-flex justify-content-center" id="navHeader">
 			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
 				<span class="navbar-toggler-icon"></span>
@@ -13,9 +14,13 @@
 					<a class="nav-link mx-2 text-light" href="#">Programmes</a>
 					<a class="nav-link mx-2 text-light" href="#">A propos</a>
 					<a class="nav-link me-5 text-light" href="{{ path("app_contact") }}"><button type="button" class="btn btn-danger btn-group-lg p-2 ">Me Contacter</button></a>
-					{% if app.user %}<a class="nav-link mx-2 text-light" href="#"><a class="nav-link mx-2 text-light" href="{{ path("app_logout") }}">Déconnexion</a><span class="text-white-50" id="userMail">{{ app.user.email }}</span></a>
+					{% if app.user %}<a class="nav-link ms-5 text-light" href="{{ path("app_logout") }}">Déconnexion</a><span class="text-white-50 ms-5" id="userMail">{{ app.user.email }}</span></a>
 					{% else %}
-					<a class="nav-link mx-2 text-light" href="{{path("app_login")}}">Connexion</a>
+					<a class="nav-link ms-5 text-light" href="{{path("app_login")}}">Connexion</a>
+					{% endif %}
+					{% if app.user %}<a class="nav link ms-5 text-light text-decoration-none" href="#"><span class="text-white">Mon compte</span></a>
+					{% else %}
+					<a class="nav link ms-5 text-light text-decoration-none" href="{{path("app_register")}}"><span class="text-white">Inscription</span></a>
 					{% endif %}
 				</div>
 			</div>

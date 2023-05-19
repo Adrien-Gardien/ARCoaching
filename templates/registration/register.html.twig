@@ -1,22 +1,36 @@
 {% extends 'base.html.twig' %}
-{% block css %}<link rel="stylesheet" href="{{ asset('styleRegister.css') }}">{% endblock %}
+{% block title %}S'enregistrer
+{% endblock %}
+{% block css %}<link rel="stylesheet" href="{{ asset('styleRegister.css') }}">
+{% endblock %}
 
-{% block title %}Register{% endblock %}
+
+{% block header %}
+	{% include 'base/nav.html.twig' %}
+{% endblock %}
+
 
 {% block body %}
-    {% for flash_error in app.flashes('verify_email_error') %}
-        <div class="alert alert-danger" role="alert">{{ flash_error }}</div>
-    {% endfor %}
+	<article id="article" class="w-100">
+		<section id="section" class="p-5" class="w-100">
+			{% for flash_error in app.flashes('verify_email_error') %}
+				<div class="alert alert-danger" role="alert">{{ flash_error }}</div>
+			{% endfor %}
 
-    <h1>Register</h1>
 
-    {{ form_start(registrationForm) }}
-        {{ form_row(registrationForm.email) }}
-        {{ form_row(registrationForm.plainPassword, {
-            label: 'Password'
-        }) }}
-        {{ form_row(registrationForm.agreeTerms) }}
 
-        <button type="submit" class="btn">Register</button>
-    {{ form_end(registrationForm) }}
+			{{ form_start(registrationForm) }}
+        <h1 class="text-light bold">S'enregistrer</h1>
+			{{ form_row(registrationForm.email) }}
+			{{ form_row(registrationForm.plainPassword) }}
+
+			<button type="submit" class="btn btn-danger my-2 w-25 bold p-3 justify-content-center" id="button_form">S'enregistrer</button>
+			{{ form_end(registrationForm) }}
+		</section>
+	</article>
+
+{% endblock %}
+
+{% block footer %}
+	{% include 'base/footer.html.twig' %}
 {% endblock %}

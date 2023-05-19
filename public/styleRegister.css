@@ -1,0 +1,40 @@
+#article {
+    display: flex;
+    background-image: url("./img/register.jpg");
+    background-size: cover;
+    height: 100vh;
+    justify-content: flex-end;
+}
+
+#section {
+    width: 50%;
+    background-color: #ffffff;
+    display: flex;
+    justify-content: center;
+}
+
+#my-form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 60%;
+    background-color: #000000c7;
+    border-radius: 0;
+}
+
+
+
+#email-input-div {
+    width: 100%;
+}
+
+#password-input-div {
+
+    width: 100%;
+}
+
+#button_form {
+    display: flex;
+    align-self: self-start;
+    width: 100%;
+}
