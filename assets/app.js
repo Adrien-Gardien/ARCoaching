@@ -8,6 +8,10 @@
 // any CSS you import will output into a single css file (app.css in this case)
 import './styles/app.scss';
 
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+AOS.init();
+
 // You can specify wich plugions you need
 import { Tooltip, Toast, Popover } from 'bootstrap';
 
