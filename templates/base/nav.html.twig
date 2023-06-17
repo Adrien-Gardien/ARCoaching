@@ -18,7 +18,10 @@
 					{% else %}
 					<a class="nav-link ms-5 text-light" href="{{path("app_login")}}">Connexion</a>
 					{% endif %}
-					{% if app.user %}<a class="nav link ms-5 text-light text-decoration-none" href="#"><span class="text-white">Mon compte</span></a>
+					{% if app.user %}<a class="nav link ms-5 text-light text-decoration-none" href="{{path("app_profile")}}"><span class="text-white">Compte</span></a>
+						{% if 'ROLE_ADMIN' in app.user.roles %}
+        				<a class="nav link ms-5 text-light text-decoration-none" href="#"><span class="text-white">Admin</span></a>
+    					{% endif %}
 					{% else %}
 					<a class="nav link ms-5 text-light text-decoration-none" href="{{path("app_register")}}"><span class="text-white">Inscription</span></a>
 					{% endif %}

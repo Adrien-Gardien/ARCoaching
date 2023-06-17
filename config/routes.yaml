@@ -5,3 +5,7 @@
 program_index:
     path: /program
     controller: App\Controller\ProgramController::index
+
+app_profile:
+    path: /profile
+    controller: App\Controller\ProfileController::index

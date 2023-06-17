@@ -31,7 +31,7 @@ class ContactController extends AbstractController
         
         $email = (new Email())
         ->from($address)
-        ->to('ARCoaching')
+        ->to('arcoaching@gmail.com')
         ->subject('Demande de contact')
         ->text($content)
         ->html('<p>See Twig integration for better HTML integration!</p>');
